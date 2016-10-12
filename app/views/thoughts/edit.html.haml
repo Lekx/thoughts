@@ -1,0 +1,21 @@
+
+
+
+= form_for @thought do |f|
+	- if @thought.errors.any?
+		%ul
+			%li= "Hey dude! you have #{@thought.errors.size} error(s)"
+			- @thought.errors.full_messages.each do |error|
+				%li= error
+
+	= f.label :category_id
+	= f.text_field :category_id
+
+	= f.label :author
+	= f.text_field :author
+
+	= f.label :thought
+	= f.text_area :thought
+
+	= f.button :clear, type: :reset
+	= f.submit

@@ -1,0 +1,9 @@
+%h1=link_to "Thoughts", thoughts_path
+
+.thought-item
+	= link_to "Share a thought", new_thought_path
+
+%ul.thoughts
+	- @thoughts.each do |thought|
+		%li.category-item
+			= link_to thought.author, thought
