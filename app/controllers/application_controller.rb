@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def home
-  	puts "hello"
+  	@categories = Category.all
   end
 
 end

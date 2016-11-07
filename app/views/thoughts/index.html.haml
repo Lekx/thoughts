@@ -7,3 +7,4 @@
 	- @thoughts.each do |thought|
 		%li.category-item
 			= link_to thought.author, thought
+			= link_to ' [x]', thought, method: :delete

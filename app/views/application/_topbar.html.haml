@@ -1,0 +1,15 @@
+%header
+	.logo
+		= link_to "thoughts", home_path
+	.menu
+		%a="home"
+		%a="categories"
+		%a="thoughts"
+		%a="about"
+	.login
+		- if user_signed_in?
+			="hello soul! #{current_user.email}"
+			=link_to "lullabies", destroy_user_session_path, method: :delete
+		- else
+			=link_to "Sign in", new_user_session_path
+			=link_to "Sign up", new_user_registration_path

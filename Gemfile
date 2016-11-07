@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-
+source 'http://rubygems.org'
+ruby '2.1.8'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
@@ -27,6 +27,9 @@ gem 'haml'
 
 gem 'foundation-rails'
 
+gem 'tzinfo-data', '1.2014.5'
+
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

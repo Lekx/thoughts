@@ -38,6 +38,7 @@ class ThoughtsController < ApplicationController
 	end
 
 	def destroy
-		
+		@thought = Thought.destroy(params[:id])
+		redirect_to thoughts_path
 	end
 end

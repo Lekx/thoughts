@@ -5,9 +5,9 @@ $main-font-color: #368F8B
 body
 	background-color: $main-bg-color
 	color: $main-font-color
-	font-size: 14px
-	height: 100vh
-	font-family: 'Indie Flower', cursive
+	font-size: 15px
+	min-height: 100vh
+	font-family: 'arial'
 	padding: 0
 	margin: 0
 	background: #160f29
@@ -16,11 +16,17 @@ body
 	background: linear-gradient(to bottom,  #160f29 0%,#246a73 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#160f29', endColorstr='#246a73',GradientType=0 )
 
+a
+	color: white
+	text-decoration: none
+
 header
 	width: 100%
 	text-align: center
 	color: #368F8B
-	
+	opacity: .5
+	font-size: 2em
+	transition: opacity 1.5s ease
 	div
 		vertical-align: center
 		box-sizing: border-box
@@ -29,6 +35,19 @@ header
 		margin-left: -4px
 		display: inline-block
 		border: 0px solid red
+
+		a
+			transition: background-color 1s ease
+			font-size: .7em
+			cursor: pointer
+			padding: 5px 10px
+			&:hover
+				background-color: rgba(0,196,255,1)
+				padding: 5px 10px
+				color: #16112B
+				box-shadow: 0px -1px 16px -1px rgba(0,196,255,1)
+	&:hover
+		opacity: 1
 main
 	padding: 20px
 
@@ -37,70 +56,44 @@ main
 	font-size: 1em
 	text-align: center
 	div 
+
+		color: rgba(0,196,255,1)
 		transform: rotate(45deg)
 		transition: background-color 1s ease
 		cursor: pointer
 		vertical-align: center
 		box-sizing: border-box
-		height: 80px
-		width: 80px
+		height: 100px
+		width: 100px
 		border: 0px solid gray
 		padding: 10px 10px
 		display: inline-block
-		margin: 25px
-		
+		margin: 25px 20px
+		-webkit-box-shadow: 0px -1px 16px -1px rgba(0,196,255,1)
+		-moz-box-shadow: 0px -1px 16px -1px rgba(0,196,255,1)
+		box-shadow: 0px -1px 16px -1px rgba(0,196,255,1)
 		label
 			cursor: pointer
 			display: block
 			position: relative
-			top: calc(50% - 12px)
-			left: calc(50% - 42px)
-			width: 80px
+			top: calc(50% - 10px)
+			left: calc(50% - 52px)
+			width: 100px
 			border: 0px solid red
 			transform: rotate(-45deg)
+			a
+				color: #368F8B
+				text-decoration: none
+
 		&:hover
+			color: white
 			font-weight: bold
 			font-color: #160F29 !important
 			background-color: $main-font-color
 			background: #246a73
-			background: -moz-radial-gradient(center, ellipse cover, #246a73 0%, #160f29 100%)
-			background: -webkit-radial-gradient(center, ellipse cover, #246a73 0%,#160f29 100%)
-			background: radial-gradient(ellipse at center, #246a73 0%,#160f29 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#246a73', endColorstr='#160f29',GradientType=1 )
-			
 
-
-
-.feel-anger
-.feel-anticipation
-.feel-disgust
-.feel-fear
-.feel-joy
-.feel-sadness
-.feel-surprise
-.feel-trust
-.feel-aggressiveness
-.feel-optimism
-.feel-contempt
-.feel-alarm
-.feel-love
-.feel-remorse
-.feel-disappointment
-.feel-submission
-.feel-pride
-.feel-hope
-.feel-cynicism
-.feel-despair
-.feel-guilt
-.feel-envy
-.feel-unbelief
-.feel-curiosity
-.feel-dominance
-.feel-anxiety
-.feel-morbidness
-.feel-shame
-.feel-outrage
-.feel-sentimentality
-.feel-delight
-.feel-pessimism
-.feel-rest
+.title
+	width: 100%
+	text-align: center
+	margin: 20px 0
+	border: 0px solid blue

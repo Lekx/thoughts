@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'application#home', as: :home
   
   get '/categories', to: 'categories#index', as: :categories

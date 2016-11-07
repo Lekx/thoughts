@@ -1,78 +1,9 @@
-%header
-	.logo
-		thoughts
-	.menu
-		home
-		search
-		about
-	.login
-		sign in
-
-%main	
+%main
+.title
+	%h1= "how are you feeling now?"
 .feelings-wrapper
-	.feel-anger
-		%label="anger"
-	.feel-anticipation
-		%label="anticipation"
-	.feel-disgust
-		%label="disgust"
-	.feel-fear
-		%label="fear"
-	.feel-joy
-		%label="joy"
-	.feel-sadness
-		%label="sadness"
-	.feel-surprise
-		%label="surprise"
-	.feel-trust
-		%label="trust"
-	.feel-aggressiveness
-		%label="aggressiveness"
-	.feel-optimism
-		%label="optimism"
-	.feel-contempt
-		%label="contempt"
-	.feel-alarm
-		%label="alarm"
-	.feel-love
-		%label="love"
-	.feel-remorse
-		%label="remorse"
-	.feel-disappointment
-		%label="disappointment"
-	.feel-submission
-		%label="submission"
-	.feel-pride
-		%label="pride"
-	.feel-hope
-		%label="hope"
-	.feel-cynicism
-		%label="cynicism"
-	.feel-despair
-		%label="despair"
-	.feel-guilt
-		%label="guilt"
-	.feel-envy
-		%label="envy"
-	.feel-unbelief
-		%label="unbelief"
-	.feel-curiosity
-		%label="curiosity"
-	.feel-dominance
-		%label="dominance"
-	.feel-anxiety
-		%label="anxiety"
-	.feel-morbidness
-		%label="morbidness"
-	.feel-shame
-		%label="shame"
-	.feel-outrage
-		%label="outrage"
-	.feel-sentimentality
-		%label="sentimentality"
-	.feel-delight
-		%label="delight"
-	.feel-pessimism
-		%label="pessimism"
-	.feel-rest
-		%label="rest"
+	- @categories.each do |category|
+		.feel
+			%label
+				= link_to category.title, category
+
